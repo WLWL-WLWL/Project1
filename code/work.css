@@ -1,0 +1,881 @@
+@font-face {
+    font-family: "Linearicons";
+    src: url("./Linearicons.ttf");
+}
+
+@font-face {
+    font-family: "FriendlyFont";
+    src: url("./FriendlyFont.woff");
+}
+
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2f5b72;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 73.125rem;
+    margin: 0 auto;
+}
+
+header {
+    background-image: url(./static/mountains.svg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+header a {
+    font-size: 0.8125rem;
+}
+
+.navbar .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+}
+
+
+/* .navbar .logo a {
+  display: inline-block;
+  width: 12.625rem;
+  height: 1.75rem;
+} */
+
+.navbar .logo img {
+    width: 12.625rem;
+    height: 1.75rem;
+    /* object-fit: contain; */
+}
+
+.navbar .links a {
+    /* font-size: 0.8125rem; */
+    margin-right: 1.25rem;
+}
+
+.navbar .links .status::before {
+    content: "";
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 1.5625rem;
+    background-color: #47c652;
+    margin-right: 0.3125rem;
+}
+
+.navbar button {
+    border-width: 0rem;
+    padding: 0.8125rem;
+    border-radius: 0.1875rem;
+    color: white;
+}
+
+.navbar .loginButton {
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-right: 1.25rem;
+}
+
+.navbar .signupButton {
+    background-color: #f47b21;
+}
+
+.header-main .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0 170px 0;
+}
+
+.header-main .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.header-main .title span {
+    display: block;
+    width: 23.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.3125rem 0.625rem 0.8125rem 1rem;
+    border-radius: 1.0625rem;
+    border: 0 solid rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.title span::before {
+    font-family: "Linearicons";
+    font-weight: 400;
+    font-size: 1.5625rem;
+    content: "\e6e2";
+    position: relative;
+    top: 0.3125rem;
+    left: -0.4375rem;
+}
+
+.title>h1,
+.title h3,
+.title span {
+    margin-bottom: 1.875rem;
+}
+
+.title button {
+    display: inline-block;
+    width: 14.375rem;
+    height: 3.75rem;
+    border-radius: 0.1875rem;
+    background-color: #f47b21;
+    border: none;
+    padding: 1.25rem 0.75rem;
+    font-size: 0.875rem;
+    /* text-transform: uppercase; */
+    font-weight: 700;
+    color: #fff;
+}
+
+.title .friendly::after {
+    content: "-It's free!";
+    font-family: "FriendlyFont";
+    display: inline-block;
+    position: relative;
+    font-size: large;
+    left: 0.75rem;
+}
+
+.weather-animation {
+    height: 18.75rem;
+    width: 31.25rem;
+    border-radius: 0.625rem;
+    border: 0.25rem solid #608094;
+    background: #16394c;
+}
+
+.weather-animation .location {
+    text-align: center;
+    font-size: 0.875rem;
+    height: 2.5rem;
+    padding-top: 0.9375rem;
+    color: white;
+    font-weight: bold;
+}
+
+.weather-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 8.5625rem;
+    position: relative;
+    top: -0.9375rem;
+}
+
+.main-left {
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* position: relative; */
+}
+
+.main-left span {
+    display: block;
+    width: 8.75rem;
+    font-weight: bold;
+}
+
+.main-left span:first-child {
+    height: 8.5625rem;
+    background: url(./static/weather_icon_partly_cloudy.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 9.0625rem;
+}
+
+.main-left span:last-child {
+    position: absolute;
+    top: 6.875rem;
+    left: 2.5rem;
+}
+
+.main-temp span {
+    text-align: center;
+    font-size: 1.5625rem;
+}
+
+.main-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.8125rem;
+    font-weight: 300;
+    padding-top: 1rem;
+}
+
+.main-right span {
+    padding: 0.125rem;
+}
+
+.week {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.3125rem;
+    font-size: 0.75rem;
+}
+
+.week .day {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.day span:nth-child(2) {
+    display: inline-block;
+    width: 5rem;
+    height: 3.75rem;
+    background: url(./static/weather_icon_partly_cloudy.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 3.75rem;
+    position: relative;
+    left: 0.8125rem;
+}
+
+
+/* <!-- Main style --> */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.main .customers {
+    background-color: #eff2f5;
+}
+
+.main .customers .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 9.375rem;
+}
+
+.customers .container .happy-customer {
+    width: 10.5rem;
+    height: 3.125rem;
+    position: relative;
+}
+
+.container .happy-customer :first-child {
+    color: black;
+    line-height: 3.125rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.customers .container div:not(:first-child):hover {
+    transform: scale(1.2);
+}
+
+.customers .container .deloitte {
+    background: url(./static/deloitte.svg);
+    background-size: 7.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.customers .container .microsoft {
+    background: url(./static/microsoft.svg);
+    background-size: 8.4375rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.customers .container .wb {
+    background: url(./static/warnerbros.svg);
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.customers .container .wawa {
+    background: url(./static/client_wawa.svg);
+    background-size: 5.3125rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -0.25rem;
+}
+
+.customers .container .schneider {
+    background: url(./static/schneider.svg);
+    background-size: 7.8125rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0.25rem;
+    left: 0.25rem;
+}
+
+.customers .container .ericsson {
+    background: url(./static/ericsson_2.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*--------------- customers_features ---------------*/
+
+.customers_features {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2.5rem;
+    background-color: white;
+    border-radius: 0.3125rem;
+}
+
+.customers_features .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #eff2f5;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+.customers_features .container div {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    background-color: #ebeff4;
+    margin: 12px;
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.customers_features .container .realtime {
+    margin-left: 2.5rem;
+}
+
+.customers_features .container .start {
+    margin-right: 2.5rem;
+}
+
+.customers_features h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.customers_features p {
+    font-size: 0.875rem;
+}
+
+.customers_features h5::before {
+    font-family: "Linearicons";
+    display: block;
+    font-weight: 400;
+    font-size: 1.875rem;
+    content: "";
+    margin-bottom: 0.625rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.customers_features .container .realtime h5::before {
+    content: "\e655";
+}
+
+.customers_features .container .mill h5::before {
+    content: "\e778";
+}
+
+.customers_features .container .rock h5::before {
+    content: "\e836";
+}
+
+.customers_features .container .start h5::before {
+    content: "\e756";
+}
+
+
+/* ---------------customers_container------------------ */
+
+.customers_container .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4.0625rem auto;
+}
+
+.customers_container .weather_data {
+    display: flex;
+    flex-direction: column;
+    width: 27.5rem;
+    text-align: left;
+}
+
+.customers_container .weather_data h4 {
+    font-size: 1.5625rem;
+    margin-bottom: 0.9375rem;
+}
+
+.customers_container .weather_data p {
+    font-size: 0.9375rem;
+    margin-bottom: 1.5625rem;
+}
+
+.customers_container .weather_data .icon {
+    margin-bottom: 0.625rem;
+    font-size: 0.9375rem;
+}
+
+.customers_container .weather_data .icon::before {
+    font-family: "Linearicons";
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.5625rem;
+    position: relative;
+    left: 0rem;
+    top: 0.3125rem;
+    margin-right: 0.6875rem;
+}
+
+.customers_container .weather_data .realtime::before {
+    content: "\e8da";
+}
+
+.customers_container .weather_data .historical::before {
+    content: "\e8e3";
+}
+
+.customers_container .weather_data .weather::before {
+    content: "\e786";
+}
+
+.customers_container .weather_data .location::before {
+    content: "\e784";
+}
+
+.customers_container .weather_data .bulk::before {
+    content: "\e977";
+}
+
+.customers_container .map {
+    display: block;
+    width: 39.6875rem;
+    height: 23.5rem;
+}
+
+
+/* ---------------section_expample-------------- */
+
+.example {
+    background-image: url(./static/bg_waves.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.example h4::before {
+    content: "example";
+    text-transform: uppercase;
+    display: block;
+    width: 6.25rem;
+    border-radius: 6.1875rem;
+    font-size: 0.875rem;
+    color: white;
+    text-align: center;
+    margin: 1.875rem auto;
+    padding: 0.625rem 0;
+    background-color: #416376;
+}
+
+.example h4 {
+    font-size: 1.5625rem;
+    font-family: Promo, Helvetica, Arial, sans-serif;
+    margin-bottom: 0.9375rem;
+}
+
+.example h5 {
+    font-size: 1.125rem;
+    max-width: 37.5rem;
+    margin: 0 auto;
+}
+
+.example .weather {
+    margin: 2.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.weather a {
+    width: 14.0625rem;
+    display: inline-block;
+    padding: 1rem 0.625rem 1.125rem 0.625rem;
+    background: #ffffff;
+    color: black;
+    font-weight: 600;
+}
+
+.weather :first-child {
+    border-top-left-radius: 0.9375rem;
+    border-bottom-left-radius: 0.9375rem;
+}
+
+.weather :last-child {
+    border-top-right-radius: 0.9375rem;
+    border-bottom-right-radius: 0.9375rem;
+}
+
+.weather a:hover {
+    background-color: #f47b21;
+    color: white;
+}
+
+.example .features .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: 0.625rem;
+}
+
+.features .container:last-child {
+    margin-bottom: 2.8125rem;
+}
+
+.features .container div {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 20px 15px 0;
+    padding: 0.625rem;
+    width: 22.25rem;
+    border-radius: 5px;
+}
+
+.features .container h5 {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.features .container p {
+    font-size: 0.875rem;
+}
+
+.features .container h5::before {
+    font-family: Linearicons;
+    font-size: 1.875rem;
+    vertical-align: middle;
+    display: inline-block;
+    content: "\e6b8";
+    font-weight: 300;
+    margin-bottom: 0.3125rem;
+    margin-right: 0.625rem;
+}
+
+.features .container .rds h5::before {
+    content: "\e661";
+}
+
+.features .container .lfr h5::before {
+    content: "\e836";
+}
+
+.features .container .si h5::before {
+    content: "\e7fb";
+}
+
+.features .container .fll h5::before {
+    content: "\e923";
+}
+
+.features .container .bls h5::before {
+    content: "\e668";
+}
+
+.features .container .ead h5::before {
+    content: "\e782";
+}
+
+
+/* ---------------section gird-------------- */
+
+.grid {
+    background-color: white;
+    padding-top: 2.8125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid h5 {
+    font-size: 1.25rem;
+    max-width: 37.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 1.25rem auto 0;
+}
+
+.grid .pics {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.875rem 0;
+}
+
+.pics .item {
+    background-color: #eef2f5;
+    width: 15.625rem;
+    height: 6.25rem;
+    margin-right: 0.625rem;
+    margin-bottom: 0.625rem;
+    border-radius: 0.3125rem;
+    object-fit: contain;
+}
+
+.pics .item:hover {
+    transform: scale(1.1);
+}
+
+.item:first-child {
+    background: #263e6a url(./static/daimler.svg);
+    background-size: 11.1875rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item:nth-child(2) {
+    background: #eef2f5 url(./static/deloitte.svg);
+    background-size: 9.375rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item:nth-child(3) {
+    background: #01275b url(./static/ericsson.svg);
+    background-size: 4.0625rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 8.4375rem;
+}
+
+.item:nth-child(4) {
+    background: #eef2f5 url(./static/microsoft.svg);
+    background-size: 10.9375rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item:nth-child(5) {
+    background: #009e4d url(./static/white_schneider.svg);
+    background-size: 9.375rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 12.5rem;
+    margin-right: 0;
+}
+
+.item:nth-child(6) {
+    background: #027ac2 url(./static/white_warnerbros.svg);
+    background-size: 4.0625rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 11.875rem;
+}
+
+.item:nth-child(7) {
+    background: #ee2e25 url(./static/wawa.svg);
+    background-size: 6.875rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item:nth-child(8) {
+    background: #eef2f5 url(./static/canda.svg);
+    background-size: 5.625rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 8.4375rem;
+}
+
+.item:nth-child(9) {
+    background: #23477f url(./static/mckinsey.svg);
+    background-size: 15.625rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 0.625rem;
+    width: 16.25rem;
+}
+
+.item:last-child {
+    background: #eef2f5 url(./static/client_rimowa.svg);
+    background-size: 9.6875rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0;
+}
+
+
+/* ---------------section gird-------------- */
+
+.adv {
+    background-color: #eef2f5;
+    padding: 2.8125rem 1.875rem 3.125rem 1.875rem;
+}
+
+.adv span {
+    padding-right: 1.875rem;
+    font-size: 1.0625rem;
+    font-weight: 500;
+}
+
+.adv span::after {
+    content: "\e944";
+    font-family: "Linearicons";
+    font-size: 1.25rem;
+    font-weight: bold;
+    left: 0.875rem;
+    top: 0.1875rem;
+    position: relative;
+}
+
+.adv button {
+    background: #f47b21;
+    color: #fff;
+    border: none;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    padding: 1.0625rem;
+    border-radius: 0.1875rem;
+}
+
+
+/* ------------------Footer style----------------- */
+
+footer {
+    color: white;
+    font-size: 0.875rem;
+    background-color: #184157;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.icon_list .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.icons .weatherstack {
+    margin-top: 3.125rem;
+}
+
+.icons .weatherstack img {
+    width: 197px;
+    height: 35px;
+    opacity: 0.6;
+}
+
+.icons .logos {
+    display: flex;
+    flex-direction: row;
+    margin: 1.25rem 4.375rem 0 0;
+}
+
+.logos a {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.logos a img {
+    width: 25px;
+    height: 25px;
+}
+
+.icon_list .lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3.125rem;
+    margin-left: 3.125rem;
+    font-size: 0.875rem;
+}
+
+.icon_list .lists ul {
+    list-style: none;
+    margin-right: 5rem;
+    text-align: left;
+}
+
+.icon_list .lists ul li {
+    margin-bottom: 0.625rem;
+}
+
+.icon_list .lists ul li:first-child {
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+}
+
+footer .copyright {
+    margin-top: 3.125rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+footer .copyright_text {
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin-top: 0.625rem;
+    margin-bottom: 1.875rem;
+}
